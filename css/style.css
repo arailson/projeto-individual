@@ -10,21 +10,48 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 80px;
 }
 
 .header .header-itens{
     display: flex;
-    margin-left: 200px;
-    width: 100%;
-    margin-top: 22px;
-    margin-bottom: 21.16;
     align-items: center;
+    margin-left: 200px;
+    margin-top: 19px;
+    margin-bottom: 18;
+    width: 471px;
+    height: 43px;
 }
 .header .header-itens img{
     max-width: 40px;
     max-height: 36.84px;
     margin-right: 20px;
 }
-.header .header-itens h1{
-    font-style: normal;
+.cadastro-limpar {
+    margin-right: 200px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: #FFFFFF;
+    width: 350px;
+    height: 40px;
+    
+}
+.cadastro-limpar a{
+    color: #333333;
+    text-decoration: none;
+    font-weight: bold;
+    border-left: 1px solid black;
+    
+    
+}
+.cadastro-limpar :nth-child(1){
+    border-left: 0px solid black;
+}
+.cadastro-limpar .a-limpar{
+    padding-left: 17px;
+    padding-right: 20px;
+}
+.cadastro-limpar .a-cadastro{
+    padding-left: 20px;
+    padding-right: 17px;
 }
