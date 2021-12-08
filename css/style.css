@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+/*Inicio do CSS do Header*/
 body{
     margin: 0px;
     font-family: Lato;
@@ -46,8 +47,51 @@ body{
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 4px;
-    margin-bottom: 4px;
-    
-    
+    margin-bottom: 4px;    
+}
+/*Fim do CSS do Header*/
+
+.conteudo{
+    display: flex;
+    justify-content: center;
+}
+.conteudo-principal{
+    width: 1100px;
+    display: flex;
+    justify-content: space-around;
+}
+.nova-transacao{
+    border: 1px solid #979797;
+    margin-top: 30px;
+}
+.nova-transacao div{
+    margin-top: 20px;
 }
 
+.nova-transacao input{
+    display: block;
+}
+
+.tipo-transacao select{
+    display: block;
+    width: 100%;
+}
+.titulo-transacao{
+    text-align: center;
+    font-weight: bold;
+}
+.botao-transacao{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.botao-transacao button{
+    background-color: #333333;
+    border-radius: 4px;
+    color: white;
+}
+
+.nova-transacao, .tipo-transacao, .nome-mercadoria, .valor{
+    margin-left: 15px;
+    margin-right: 15px;
+}
