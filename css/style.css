@@ -5,31 +5,26 @@ body{
 }
 .header{
     background-color: #E0E0E0;
-    width: 1500px;
-    height: 80px;
+  
+    display: flex;
+    justify-content: center;
 }
 .header-principal{
     width: 1100px;
     height: 79px;
-    margin-left: 200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .header .header-itens{
-    width: 471px;
-    height: 43px;
     margin-top: 19px;
     display: flex;
     align-items: center;
 }
 .header .header-itens div{
-    width: 411px;
-    height: 43px;
     font-weight: 600;
     font-size: 20px;
-    line-height: 40px;
     margin-left: 20px;
 }
 .header .header-itens img{
@@ -38,8 +33,7 @@ body{
     
 }
 .cadastro-limpar {
-    width: 350px;
-    height: 40px;
+
     margin-top: 20px;
     background-color: #FFFFFF;
     display: flex;
@@ -50,11 +44,10 @@ body{
     color: #333333;
     text-decoration: none;
     font-weight: 600;
-    font-size: 16px;
-    line-height: 19px;
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 4px;
+    margin-bottom: 4px;
     
     
 }
