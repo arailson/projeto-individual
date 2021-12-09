@@ -51,6 +51,7 @@ body{
 }
 /*Fim do CSS do Header*/
 
+/*Parte da Nova Transação (INICIO)*/
 .conteudo{
     display: flex;
     justify-content: center;
@@ -101,6 +102,28 @@ body{
     font-size: 14px;
     line-height: 22px;
     margin-left: 15px;
-    margin-right: 15px;
-    
+    margin-right: 15px;   
 }
+.tipo-transacao select{
+    color: #999;
+}
+/*Parte da Nova Transação (FIM)*/
+
+/*Parte de Extrato Transações (INICIO)*/
+.extrato-transacao{
+    margin-top: 30px;
+    width: 680px;
+}
+
+.titulo-extrato{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+}
+.posicao-extrato{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Parte de Extrato Transações (FIM)*/
