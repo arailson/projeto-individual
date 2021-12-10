@@ -113,17 +113,62 @@ body{
 .extrato-transacao{
     margin-top: 30px;
     width: 680px;
+    margin-left: 20px;
 }
-
-.titulo-extrato{
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 22px;
+.extrato-transacao h1{
     text-align: center;
 }
-.posicao-extrato{
+.mercadoria-valor{
     display: flex;
     justify-content: space-between;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: bold;
+}
+.descricao-valor{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    margin-top: 7px;
+}
+    
+
+.descricao-transacao{
+    display: flex;
+    font-size: 14px;
+    line-height: 16px;
+    width: 231px;
+    
 }
 
+.descricao-sinal{
+    margin-left: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.descricao-texto{
+    margin-left: 11px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.valor-transacao{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.total{
+    margin-top: 11px;
+    margin-bottom: 0px;
+}
+.linha-horizontal{
+    border: 1px solid #979797;
+    
+}
+.lucro {
+    text-align: right;
+    margin-top: 0px;
+    font-size: 10px;
+    line-height: 22px;
+}
 /*Parte de Extrato Transações (FIM)*/
