@@ -17,24 +17,36 @@ body{
     align-items: center;
 }
 
-.header .header-itens{
-    margin-top: 19px;
-    display: flex;
-    align-items: center;
-}
-.header .header-itens div{
+.header-texto{
+    width: 64%;
+    margin-left: 20px;
     font-weight: 600;
     font-size: 20px;
-    margin-left: 20px;
+    line-height: 24px;
 }
-.header .header-itens img{
+
+
+.header-itens img{
     width: 40px;
     height: 36.84px;
     
 }
+.menu{
+
+    display: none;
+    width: 24px;
+    height: 24px;
+
+}
+.linha-menu{
+    border: 1px solid #1f1b1b;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
 .cadastro-limpar {
 
-    margin-top: 20px;
+ 
     background-color: #FFFFFF;
     display: flex;
     align-items: center;
@@ -174,6 +186,8 @@ body{
 /*Parte de Extrato Transações (FIM)*/
 
 .div-rodape{
+    display: flex;
+    align-items: flex-end;
     height: 100%;
 }
 
@@ -182,4 +196,17 @@ body{
     height: 8px;
     background: #333333;
 
+}
+
+/*Inicio de responsividade do site*/
+@media screen and (max-width: 1112px){
+    .header-principal{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .conteudo{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 }
