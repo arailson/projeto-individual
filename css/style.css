@@ -21,7 +21,7 @@ body{
     width: 64%;
     margin-left: 20px;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 25px;
     line-height: 24px;
 }
 
@@ -79,16 +79,17 @@ body{
     margin-top: 30px;
     box-sizing: border-box;
 }
-.nova-transacao div{
+.posicao-transacao div{
     margin-top: 20px;
 }
 
 
-.nova-transacao input, select{
+.posicao-transacao input, select{
     width: 100%;
     border-radius: 4px;
     border: 1px solid #979797;
     height: 32px;
+   
 }
 
 .titulo-transacao{
@@ -100,6 +101,7 @@ body{
 .botao-transacao{
     display: flex;
     justify-content: center;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 .botao-transacao button{
@@ -208,5 +210,37 @@ body{
     .conteudo{
         margin-left: 20px;
         margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    .conteudo{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .conteudo-principal{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .posicao-transacao{
+        display: flex;
+    }
+
+    .botao-transacao{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .cadastro-limpar{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+    .header-texto{
+        width: unset;
+        margin-left: 0px;
+        margin-right: 28px;
     }
 }
