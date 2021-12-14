@@ -38,6 +38,38 @@ body{
     height: 24px;
 
 }
+.conteudo-menu{
+    display: none;
+    height: 100%;
+    width: 252px;
+    position: fixed;
+    top: 1px;
+    right: 0px;
+    background-color: #333333;
+    transition: all 1.5s ease;
+}
+.sair-menu{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 19px;
+}
+.organizar-opcoes{
+    height: 10%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 7px;
+    align-items: center;
+}
+
+.opcoes-menu h2{
+    color: white;
+    font-size: 16px;
+    margin: 0px; 
+    text-align: end;
+    margin-right: 20px;
+
+}
+
 .linha-menu{
     border: 1px solid #1f1b1b;
     margin-right: 3px;
@@ -238,6 +270,12 @@ body{
     .menu{
         display: block;
     }
+    .menu:hover .conteudo-menu{
+        display: block;
+    }
+   .opcoes-menu .organizar-opcoes:hover{
+       background-color: #C4C4C4;
+   }
     .header-texto{
         width: unset;
         margin-left: 0px;
