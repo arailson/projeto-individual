@@ -31,42 +31,11 @@ body{
     height: 36.84px;
     
 }
-.menu{
+.botao-menu{
 
     display: none;
     width: 24px;
     height: 24px;
-
-}
-.conteudo-menu{
-    display: none;
-    height: 100%;
-    width: 252px;
-    position: fixed;
-    top: 1px;
-    right: 0px;
-    background-color: #333333;
-    transition: all 1.5s ease;
-}
-.sair-menu{
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-bottom: 19px;
-}
-.organizar-opcoes{
-    height: 10%;
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 7px;
-    align-items: center;
-}
-
-.opcoes-menu h2{
-    color: white;
-    font-size: 16px;
-    margin: 0px; 
-    text-align: end;
-    margin-right: 20px;
 
 }
 
@@ -243,6 +212,9 @@ body{
         margin-left: 20px;
         margin-right: 20px;
     }
+    .extrato-transacao {
+        width: 652px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -267,15 +239,20 @@ body{
     .cadastro-limpar{
         display: none;
     }
-    .menu{
-        display: block;
+    .conteudo-principal{
+        width: 100%;
     }
-    .menu:hover .conteudo-menu{
-        display: block;
+    .extrato-transacao{
+        width: 100%;
+        margin-left: 0px;
     }
-   .opcoes-menu .organizar-opcoes:hover{
-       background-color: #C4C4C4;
-   }
+
+    .botao-menu{
+        display: flex;
+        flex-direction: column;
+    }
+  
+
     .header-texto{
         width: unset;
         margin-left: 0px;
