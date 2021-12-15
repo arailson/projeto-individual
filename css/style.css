@@ -316,6 +316,9 @@ body{
             margin-top: 28px;
             border: 1px solid #979797;
         }
+        .header-texto{
+            margin-right: 2px;
+        }
 
         #mv1{
             margin-left: 30px;
