@@ -296,4 +296,37 @@ body{
         margin-left: 0px;
         margin-right: 28px;
     }
+
+    @media screen and (max-width: 411px){
+
+        .titulo-transacao{
+            display: none;
+        }
+
+        .posicao-transacao{
+            display: flex;
+        flex-direction: column;
+        }
+        
+        .cadastro-limpar{
+            width: 351px;
+            right: -351px;
+        }
+        .linhaNova-extrato{
+            margin-top: 28px;
+            border: 1px solid #979797;
+        }
+
+        #mv1{
+            margin-left: 30px;
+        }
+
+        #mv2{
+            margin-right: 30px;
+        }
+        
+        #t1{
+            margin-left: 30px;
+        }
+    }
 }
