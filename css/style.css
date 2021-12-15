@@ -59,8 +59,13 @@ body{
     font-weight: 600;
     margin-left: 20px;
     margin-right: 20px;
-    margin-top: 4px;
-    margin-bottom: 4px;    
+    margin-top: 7px;
+    margin-bottom: 7px;    
+
+}
+.divisao{
+    border: 1px solid #1f1b1b;
+    height: 17px;
 }
 /*Fim do CSS do Header*/
 
@@ -237,6 +242,23 @@ body{
         justify-content: flex-end;
     }
     .cadastro-limpar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: unset;
+        position: fixed;
+        background-color: #333333;
+        top: 0px;
+        right: -252px;
+        width: 252px;
+        height: 100%;
+        transition: all 1.5s ease;
+       
+    }
+    .cadastro-limpar a{
+        color:  white;
+    }
+    .divisao{
         display: none;
     }
     .conteudo-principal{
@@ -251,8 +273,10 @@ body{
         display: flex;
         flex-direction: column;
     }
+    .menu:hover .cadastro-limpar{
+        right: 0px;
+    }
   
-
     .header-texto{
         width: unset;
         margin-left: 0px;
