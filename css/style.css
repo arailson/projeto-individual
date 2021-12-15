@@ -53,9 +53,10 @@ body{
     align-items: center;
     justify-content: space-between;
 }
-.cadastro-limpar a{
+.cadastro-limpar h2{
     color: #333333;
     text-decoration: none;
+    font-size: 16px;
     font-weight: 600;
     margin-left: 20px;
     margin-right: 20px;
@@ -255,8 +256,18 @@ body{
         transition: all 1.5s ease;
        
     }
-    .cadastro-limpar a{
+    .cadastro-limpar h2{
         color:  white;
+        margin-top: 7px;
+    }
+    #p1{
+        margin-top: 54px;
+    }
+    .posicao-elementos{
+        width: 100%;
+        margin-top: 7px;
+        display: flex;
+        justify-content: flex-end;
     }
     .divisao{
         display: none;
@@ -275,6 +286,9 @@ body{
     }
     .menu:hover .cadastro-limpar{
         right: 0px;
+    }
+    .posicao-elementos:hover{
+        background-color: #C4C4C4;
     }
   
     .header-texto{
