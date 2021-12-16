@@ -194,6 +194,7 @@ body{
 }
 /*Parte de Extrato Transações (FIM)*/
 
+/*Linha do Rodapé (INICIO)*/
 .div-rodape{
     display: flex;
     align-items: flex-end;
@@ -206,8 +207,11 @@ body{
     background: #333333;
 
 }
+/*Linha do Rodapé (FIM)*/
+
 
 /*Inicio de responsividade do site*/
+/*Versão para tablet (INICIO)*/
 @media screen and (max-width: 1112px){
     .header-principal{
         margin-left: 20px;
@@ -223,6 +227,7 @@ body{
     }
 }
 
+/*Versão para tablet portatil (INICIO)*/
 @media screen and (max-width: 768px) {
     
     .conteudo{
@@ -242,6 +247,8 @@ body{
         display: flex;
         justify-content: flex-end;
     }
+    
+    /*Mudança no menu para ter interação com o botão e ter um transition*/
     .cadastro-limpar{
         display: flex;
         flex-direction: column;
@@ -296,7 +303,9 @@ body{
         margin-left: 0px;
         margin-right: 28px;
     }
+    /*Versão para tablet portatil (INICIO)*/
 
+    /*Versão para Smartphone (INICIO)*/
     @media screen and (max-width: 411px){
 
         .titulo-transacao{
@@ -332,4 +341,5 @@ body{
             margin-left: 30px;
         }
     }
+    /*Versão Smartphone (FIM)*/
 }

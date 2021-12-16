@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <!-- Inicio do Cabaçalho-->
     <header class="header">
 
         <div class="header-principal">
@@ -21,7 +22,12 @@
                 Controle financeiro
             </div>
 
+            <!--HTML do menu onde nas versões para
+            tablet e smartphone o botão é acrescentado
+            para o conteudo ser mostrado na lateral-->
+
             <div class="menu">
+
                 <div class="botao-menu">
                     <div style="margin-top: 6px;" class="linha-menu"></div>
                     <div style="margin-top: 3px; margin-bottom: 3px;" class="linha-menu"></div>
@@ -29,27 +35,31 @@
 
                 </div>
 
+                <!--Conteudo dentro de menu-->
                 <div class="cadastro-limpar">
-    
-                    <div id="p1" class="posicao-elementos"> 
+
+                    <div id="p1" class="posicao-elementos">
                         <h2 class="a-cadastro">Cadastro de transações</h2>
-                        
+
                     </div>
                     <div class="divisao"></div>
-                    
+
                     <div id="p2" class="posicao-elementos">
                         <h2 class="a-limpar">Limpar dados</h2>
 
                     </div>
-    
+
                 </div>
-                
+
             </div>
 
 
         </div>
     </header>
 
+    <!--Aqui começa as informaçãoes
+    da parte NOVA TRANSAÇÃO e EXTRATO
+    TRANSAÇÃO-->
     <section class="conteudo">
 
         <div class="conteudo-principal">
@@ -86,7 +96,7 @@
                 </div>
             </div>
 
-            <div class="linhaNova-extrato"></div>
+            <div class="linhaNova-extrato"></div> <!--Esta linha só aparece na vesão Smatphone-->
 
             <div class="extrato-transacao">
 
@@ -96,7 +106,7 @@
                     <h2 id="mv1">Mercadoria</h2>
                     <h2 id="mv2">Valor</h2>
                 </div>
-                <div class="linha-horizontal"></div>
+                <div class="linha-horizontal"></div> <!--Linha para dividir as informações-->
 
                 <div class="descricao-valor">
                     <div class="descricao-transacao">
@@ -105,7 +115,7 @@
                     </div>
                     <h4 class="valor-transacao">R$ 12.999,99</h4>
                 </div>
-                <div class="linha-horizontal"></div>
+                <div class="linha-horizontal"></div> <!--Linha para dividir as informações-->
 
                 <div class="descricao-valor">
                     <div class="descricao-transacao">
@@ -114,7 +124,7 @@
                     </div>
                     <h4 class="valor-transacao">R$ 99,99</h4>
                 </div>
-                <div class="linha-horizontal"></div>
+                <div class="linha-horizontal"></div> <!--Linha para dividir as informações-->
 
                 <div class="descricao-valor">
                     <div class="descricao-transacao">
@@ -123,9 +133,9 @@
                     </div>
                     <h4 class="valor-transacao">R$ 9,99</h4>
                 </div>
-                <div class="linha-horizontal"></div>
+                <div class="linha-horizontal"></div> <!--Linha para dividir as informações-->
 
-                <div style="margin-top: 3px;" class="linha-horizontal"></div>
+                <div style="margin-top: 3px;" class="linha-horizontal"></div> <!--Linha para dividir as informações-->
                 <div class="descricao-valor">
                     <h4 id="t1" class="total">Total</h4>
                     <h4 class="total">R$ 12.909,99</h4>
@@ -134,8 +144,10 @@
                 <h4 class="lucro">[LUCRO]</h4>
             </div>
         </div>
-
+    <!--Fim do conteudo-->
     </section>
+
+    <!--Linha do rodapé-->
     <div class="div-rodape">
         <footer class="rodape"></footer>
 
