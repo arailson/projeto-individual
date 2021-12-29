@@ -9,6 +9,7 @@
 
 </head>
 
+<script src="./js/index.js"></script>
 <body>
     <!-- Inicio do Cabaçalho-->
     <header class="header">
@@ -64,7 +65,7 @@
 
         <div class="conteudo-principal">
 
-            <div class="nova-transacao">
+            <form class="nova-transacao" name="formulario">
 
                 <div class="titulo-transacao">
                     <h1>Nova transação</h1>
@@ -75,26 +76,27 @@
                         <label>Tipo de transação</label>
                         <select>
                             <option>Compra</option>
+                            <option>Venda</option>
                         </select>
                     </div>
 
                     <div class="nome-mercadoria">
                         <label>Nome da Mercadoria</label>
-                        <input type="text" placeholder="Input">
+                        <input type="text" placeholder="Input" id="nomeMercadoria">
                     </div>
 
                     <div class="valor">
                         <label>Valor</label>
-                        <input type="number" placeholder="R$0,00">
+                        <input type="number" placeholder="R$0,00" id="valor">
                     </div>
 
                 </div>
 
                 <div class="botao-transacao">
-                    <button>Adicionar transação</button>
+                    <button onclick="validar()">Adicionar transação</button>
 
                 </div>
-            </div>
+            </form>
 
             <div class="linhaNova-extrato"></div> <!--Esta linha só aparece na vesão Smatphone-->
 
