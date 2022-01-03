@@ -154,13 +154,16 @@ body{
     margin-bottom: 8px;
     margin-top: 7px;
 }
+.descricao-valor p{
+    font-weight: bolder
+}
     
 
 .descricao-transacao{
     display: flex;
     font-size: 14px;
     line-height: 16px;
-    width: 231px;
+    width: 70%;
     
 }
 
