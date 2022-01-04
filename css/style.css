@@ -46,14 +46,14 @@ body{
 }
 
 .cadastro-limpar {
-
- 
+    height: 28px;
     background-color: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
-.cadastro-limpar h2{
+.cadastro-limpar a{
     color: #333333;
     text-decoration: none;
     font-size: 16px;
@@ -62,6 +62,18 @@ body{
     margin-right: 20px;
     margin-top: 7px;
     margin-bottom: 7px;    
+    white-space: nowrap;
+}
+.posicao-elementos{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.posicao-elementos:hover{
+    background-color: black;
+}
+.posicao-elementos:hover a{
+    color: white;
 
 }
 .divisao{
@@ -264,9 +276,10 @@ body{
         width: 252px;
         height: 100%;
         transition: all 1.5s ease;
+        height: none;
        
     }
-    .cadastro-limpar h2{
+    .cadastro-limpar a{
         color:  white;
         margin-top: 7px;
     }
@@ -274,6 +287,7 @@ body{
         margin-top: 54px;
     }
     .posicao-elementos{
+        height: unset;
         width: 100%;
         margin-top: 7px;
         display: flex;
@@ -317,7 +331,7 @@ body{
 
         .posicao-transacao{
             display: flex;
-        flex-direction: column;
+            flex-direction: column;
         }
         
         .cadastro-limpar{
