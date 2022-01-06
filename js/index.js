@@ -47,3 +47,8 @@ function validar() {
     }
 
 }
+
+function excluirDados(){
+    extrato.splice(0,infoExtrato + 1);
+    document.querySelector("div.extrato-transacao-item").remove();
+}

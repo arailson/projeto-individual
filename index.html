@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Projeto Individual</title>
     <link rel="stylesheet" href="./css/style.css">
 
@@ -46,7 +45,7 @@
                     <div class="divisao"></div>
 
                     <div id="p2" class="posicao-elementos">
-                        <a class="a-limpar">Limpar dados</a>
+                        <a onclick="excluirDados()" class="a-limpar">Limpar dados</a>
 
                     </div>
 
@@ -72,7 +71,7 @@
                 </div>
 
                 <div class="posicao-transacao">
-                    <div class="tipo-transacao">
+                    <div class="item-formulario">
                         <label>Tipo de transação</label>
                         <select>
                             <option>Compra</option>
@@ -80,12 +79,12 @@
                         </select>
                     </div>
 
-                    <div class="nome-mercadoria">
+                    <div class="item-formulario">
                         <label>Nome da Mercadoria</label>
                         <input type="text" placeholder="Input" id="nomeMercadoria">
                     </div>
 
-                    <div class="valor">
+                    <div class="item-formulario">
                         <label>Valor</label>
                         <input type="number" placeholder="R$0,00" id="valor">
                     </div>
