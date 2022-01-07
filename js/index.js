@@ -1,20 +1,11 @@
-var extrato = [
-    {
-        descricaoSinal: '+',
-        descricaoTexto: 'Lorem ipsum dolor sit amet consectetur',
-        valorTransacao: 'R$ 12.999,99'
-    },
-    {
-        descricaoSinal: '-',
-        descricaoTexto: 'Quis nostrud exercitation',
-        valorTransacao: 'R$ 99,99'
-    },
-    {
-        descricaoSinal: '+',
-        descricaoTexto: 'Lorem ipsum',
-        valorTransacao: 'R$ 9,99'
-    }
-]
+var extratoVazio = localStorage.getItem('extrato')
+if (extratoVazio != null) {
+    var extrato = JSON.parse(extratoVazio)
+}
+else{
+    extrato = [];
+}
+
 
 for (infoExtrato in extrato) {
     document.querySelector("div.extrato-transacao-item").innerHTML +=`<div class="descricao-valor">
@@ -49,6 +40,13 @@ function validar() {
 }
 
 function excluirDados(){
-    extrato.splice(0,infoExtrato + 1);
-    document.querySelector("div.extrato-transacao-item").remove();
+    if(extrato.length === 0){
+        alert('Não há nenhuma informação para remover');
+    }
+    else{
+        extrato.splice(0,infoExtrato + 1);
+        document.querySelector("div.extrato-transacao-item").remove();
+
+    }
+    localStorage.setItem('extrato',JSON.stringify(extrato))
 }
