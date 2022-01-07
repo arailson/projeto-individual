@@ -73,7 +73,7 @@
                 <div class="posicao-transacao">
                     <div class="item-formulario">
                         <label>Tipo de transação</label>
-                        <select>
+                        <select id="tipoTransacao">
                             <option>Compra</option>
                             <option>Venda</option>
                         </select>
@@ -92,7 +92,7 @@
                 </div>
 
                 <div class="botao-transacao">
-                    <button onclick="validar()">Adicionar transação</button>
+                    <button onclick="validar(event);">Adicionar transação</button>
 
                 </div>
             </form>
@@ -131,6 +131,7 @@
     </div>
 
     <script src="./js/index.js"></script>
+    <script src="./js/form.js"></script>
 </body>
 
 </html>

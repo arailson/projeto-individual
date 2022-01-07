@@ -97,6 +97,7 @@ body{
     border-radius: 4px;
     margin-top: 30px;
     box-sizing: border-box;
+    width: 36%
 }
 .posicao-transacao div{
     margin-top: 20px;
@@ -151,7 +152,6 @@ body{
 .extrato-transacao{
     margin-top: 30px;
     width: 680px;
-    margin-left: 20px;
 }
 .extrato-transacao h1{
     text-align: center;
@@ -245,6 +245,7 @@ body{
     .extrato-transacao {
         width: 652px;
     }
+    
 }
 
 /*Versão para tablet portatil (INICIO)*/
@@ -266,6 +267,9 @@ body{
     .botao-transacao{
         display: flex;
         justify-content: flex-end;
+    }
+    .nova-transacao{
+        width: unset;
     }
     
     /*Mudança no menu para ter interação com o botão e ter um transition*/
