@@ -1,4 +1,5 @@
-function validar(e) {
+function enviaFormulario(e) {
+    
     var nomeMercadoria = document.getElementById("nomeMercadoria");
     var valor = document.getElementById("valor")
 
@@ -28,9 +29,8 @@ function validar(e) {
         valorTransacao: e.path[2].elements['valor'].value
     })
 
+    
     localStorage.setItem('extrato', JSON.stringify(extrato));
     
 }
-function desenhaTabela(){
 
-}

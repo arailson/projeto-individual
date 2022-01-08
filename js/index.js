@@ -18,6 +18,24 @@ for (infoExtrato in extrato) {
     <div class="linha-horizontal"></div`
 }
 
+var total = 0;
+for(infoExtrato in extrato){
+    if (extrato.length === 0){
+        total = 0;
+    }
+    else if(extrato[infoExtrato].descricaoSinal === '+'){
+        total = total + parseInt(extrato[infoExtrato].valorTransacao); 
+
+    }
+    else{
+        total = total + (parseInt(extrato[infoExtrato].valorTransacao * -1)); 
+    }
+    
+    
+}
+
+
+
 function excluirDados(){
     if(extrato.length === 0){
         alert('Não há nenhuma informação para remover');
