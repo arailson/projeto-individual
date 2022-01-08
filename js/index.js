@@ -31,12 +31,12 @@ for(infoExtrato in extrato){
         total = total + (parseInt(extrato[infoExtrato].valorTransacao * -1)); 
     }
     
-    
+    document.querySelector(".total span").innerText = total;
 }
 
 
-
 function excluirDados(){
+
     if(extrato.length === 0){
         alert('Não há nenhuma informação para remover');
     }
@@ -46,4 +46,6 @@ function excluirDados(){
 
     }
     localStorage.setItem('extrato',JSON.stringify(extrato))
+    total = 0;
+    document.querySelector(".total span").innerText = total;
 }
