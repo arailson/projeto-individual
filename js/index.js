@@ -9,14 +9,15 @@ else{
 
 for (infoExtrato in extrato) {
     document.querySelector("div.extrato-transacao-item").innerHTML +=`<div class="descricao-valor">
-       <div class="descricao-transacao">
-           <p class="descricao-sinal"> ${extrato[infoExtrato].descricaoSinal} </p>
-           <p class="descricao-texto">${extrato[infoExtrato].descricaoTexto}</p>
-       </div>
-       <p class="valor-transacao">${extrato[infoExtrato].valorTransacao}</p>
+    <div class="descricao-transacao">
+    <p class="descricao-sinal"> ${extrato[infoExtrato].descricaoSinal} </p>
+    <p class="descricao-texto">${extrato[infoExtrato].descricaoTexto}</p>
+    </div>
+    <p class="valor-transacao">${extrato[infoExtrato].valorTransacao.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</p>
     </div>
     <div class="linha-horizontal"></div`
-}
+};
+
 
 var total = 0;
 for(infoExtrato in extrato){
@@ -31,7 +32,16 @@ for(infoExtrato in extrato){
         total = total + (parseInt(extrato[infoExtrato].valorTransacao * -1)); 
     }
     
-    document.querySelector(".total span").innerText = total;
+    document.querySelector(".total span").innerText = total.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+    if(total > 0){
+        document.querySelector(".lucro").innerText = '[LUCRO]'
+    }
+    else if(total == 0){
+        document.querySelector(".lucro").innerText = ''
+    }
+    else{
+        document.querySelector(".lucro").innerText = '[PREJUIZO]'
+    }
 }
 
 

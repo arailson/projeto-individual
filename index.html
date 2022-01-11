@@ -86,7 +86,7 @@
 
                     <div class="item-formulario">
                         <label>Valor</label>
-                        <input type="number" placeholder="R$0,00" id="valor">
+                        <input onkeypress="return(testaCampoValor(this, '.', ',',event))" type="text" placeholder="R$0,00" id="valor">
                     </div>
 
                 </div>
@@ -115,10 +115,10 @@
                 <div style="margin-top: 3px;" class="linha-horizontal"></div> <!--Linha para dividir as informações-->
                 <div class="descricao-valor">
                     <h4 id="t1" class="total">Total</h4>
-                    <h4 class="total">R$ <span>0</span></h4>
+                    <h4 class="total"><span>0</span></h4>
                 </div>
 
-                <h4 class="lucro">[LUCRO]</h4>
+                <h4 class="lucro"></h4>
             </div>
         </div>
     <!--Fim do conteudo-->
