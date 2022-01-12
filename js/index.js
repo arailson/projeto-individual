@@ -25,7 +25,7 @@ for(infoExtrato in extrato){
         total = 0;
     }
     else if(extrato[infoExtrato].descricaoSinal === '+'){
-        total = total + parseInt(extrato[infoExtrato].valorTransacao); 
+        total = total + parseFloat(extrato[infoExtrato].valorTransacao); 
 
     }
     else{
@@ -33,6 +33,7 @@ for(infoExtrato in extrato){
     }
     
     document.querySelector(".total span").innerText = total.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+    
     if(total > 0){
         document.querySelector(".lucro").innerText = '[LUCRO]'
     }
@@ -57,5 +58,8 @@ function excluirDados(){
     }
     localStorage.setItem('extrato',JSON.stringify(extrato))
     total = 0;
+    if(total == 0){
+        document.querySelector(".lucro").innerText = ''
+    }
     document.querySelector(".total span").innerText = total;
 }

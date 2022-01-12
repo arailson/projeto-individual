@@ -23,11 +23,14 @@ function enviaFormulario(e) {
     else{
         extrato = [];
     }
+    valorItem = e.path[2].elements['valor'].value
+    valorItem = valorItem.replace(/\./g, '');
+    valorItem = valorItem.replace(',','.');
     extrato.push({
         
         descricaoSinal: (e.path[2].elements['tipoTransacao'].value === 'Compra' ? '-' : '+'),
         descricaoTexto: e.path[2].elements['nomeMercadoria'].value,
-        valorTransacao: parseInt(e.path[2].elements['valor'].value)
+        valorTransacao: parseFloat(valorItem)
 
     })
 
