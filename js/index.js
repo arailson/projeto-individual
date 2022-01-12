@@ -59,7 +59,7 @@ function excluirDados(){
     localStorage.setItem('extrato',JSON.stringify(extrato))
     total = 0;
     if(total == 0){
-        document.querySelector(".lucro").innerText = ''
+        document.querySelector(".lucro").innerText = '';
     }
-    document.querySelector(".total span").innerText = total;
+    document.querySelector(".total span").innerText = total.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
 }
