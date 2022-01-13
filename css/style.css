@@ -280,10 +280,6 @@ body{
         margin-top: 20px;
         margin-left: 20px;
     }
-    .vector img:hover .cadastro-limpar{
-        right: -252px;
-    }
-    
     /*Mudança no menu para ter interação com o botão e ter um transition*/
     .cadastro-limpar{
         display: flex;
@@ -328,9 +324,6 @@ body{
         display: flex;
         flex-direction: column;
     }
-    .menu:hover .cadastro-limpar{
-        right: 0px;
-    }
     .posicao-elementos:hover{
         background-color: #C4C4C4;
     }
@@ -357,9 +350,6 @@ body{
     .cadastro-limpar{
         width: 351px;
         right: -351px;
-    }
-    .vector img:hover .cadastro-limpar{
-        right: 0px;
     }
     .linhaNova-extrato{
         margin-top: 28px;

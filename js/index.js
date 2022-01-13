@@ -63,3 +63,9 @@ function excluirDados(){
     }
     document.querySelector(".total span").innerText = total.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
 }
+function abrirMenu(){
+    document.querySelector(".cadastro-limpar").style.right = 0;
+}
+function fecharMenu(){
+    document.querySelector(".cadastro-limpar").style.right = -252;
+}
