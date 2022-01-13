@@ -67,5 +67,11 @@ function abrirMenu(){
     document.querySelector(".cadastro-limpar").style.right = 0;
 }
 function fecharMenu(){
-    document.querySelector(".cadastro-limpar").style.right = -252;
+    if(document.querySelector(".cadastro-limpar").offsetWidth == 351){
+        document.querySelector(".cadastro-limpar").style.right = -351;
+    }
+    else
+    {
+        document.querySelector(".cadastro-limpar").style.right = -252;
+    }
 }
