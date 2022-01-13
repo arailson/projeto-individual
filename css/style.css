@@ -347,10 +347,6 @@ body{
         display: flex;
         flex-direction: column;
     }   
-    .cadastro-limpar{
-        width: 351px;
-        right: -351px;
-    }
     .linhaNova-extrato{
         margin-top: 28px;
         border: 1px solid #979797;

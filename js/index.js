@@ -64,7 +64,14 @@ function excluirDados(){
     document.querySelector(".total span").innerText = total.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
 }
 function abrirMenu(){
-    document.querySelector(".cadastro-limpar").style.right = 0;
+    if(window.innerWidth <= 411){
+        document.querySelector(".cadastro-limpar").style.width = 351;
+        document.querySelector(".cadastro-limpar").style.right = 0;
+    }
+    else
+    {
+        document.querySelector(".cadastro-limpar").style.right = 0;
+    }
 }
 function fecharMenu(){
     if(document.querySelector(".cadastro-limpar").offsetWidth == 351){
