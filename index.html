@@ -66,7 +66,7 @@
 
         <div class="conteudo-principal">
 
-            <form class="nova-transacao" name="formulario">
+            <form class="nova-transacao" name="formulario" onsubmit="enviaFormulario(event)">
 
                 <div class="titulo-transacao">
                     <h1>Nova transação</h1>
@@ -94,7 +94,8 @@
                 </div>
 
                 <div class="botao-transacao">
-                    <button onclick="enviaFormulario(event);">Adicionar transação</button>
+                    <input type="submit" value="Adicionar transação">
+                    <!-- <button onclick="enviaFormulario(event);">Adicionar transação</button> -->
 
                 </div>
             </form>
