@@ -1,4 +1,5 @@
 function enviaFormulario(e) {
+    e.preventDefault();
     
     var nomeMercadoria = document.getElementById("nomeMercadoria");
     var valor = document.getElementById("valor")
@@ -33,8 +34,8 @@ function enviaFormulario(e) {
 
     localStorage.setItem('extrato', JSON.stringify(extrato)); 
 
-    printExtrato()
-    printTotal()
+    printExtrato();
+    printTotal();
 }
 function testaCampoValor(objTextBox, separadorMilesimo, separadorDecimal, e){
     var sep = 0;
