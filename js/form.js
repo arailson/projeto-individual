@@ -13,9 +13,6 @@ function enviaFormulario(e) {
         return;
     }
 
-    
-    
-    
     var extratoVazio = localStorage.getItem('extrato')
     if (extratoVazio != null) {
         var extrato = JSON.parse(extratoVazio)
@@ -34,8 +31,10 @@ function enviaFormulario(e) {
 
     })
 
-    
     localStorage.setItem('extrato', JSON.stringify(extrato)); 
+
+    printExtrato()
+    printTotal()
 }
 function testaCampoValor(objTextBox, separadorMilesimo, separadorDecimal, e){
     var sep = 0;
