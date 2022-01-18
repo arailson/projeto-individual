@@ -64,9 +64,9 @@
     TRANSAÇÃO-->
     <section class="conteudo">
 
-        <div class="conteudo-principal">
+        <div class="conteudo-principal" >
 
-            <form class="nova-transacao" name="formulario">
+            <form class="nova-transacao" name="formulario" onsubmit="enviaFormulario(event);">
 
                 <div class="titulo-transacao">
                     <h1>Nova transação</h1>
@@ -75,7 +75,7 @@
                 <div class="posicao-transacao">
                     <div class="item-formulario">
                         <label>Tipo de transação</label>
-                        <select id="tipoTransacao">
+                        <select id="tipoTransacao" name="tipoTransacao">
                             <option>Compra</option>
                             <option>Venda</option>
                         </select>
@@ -83,19 +83,18 @@
 
                     <div class="item-formulario">
                         <label>Nome da Mercadoria</label>
-                        <input type="text" placeholder="Input" id="nomeMercadoria">
+                        <input type="text" placeholder="Input" id="nomeMercadoria" name="nomeMercadoria"> 
                     </div>
 
                     <div class="item-formulario">
                         <label>Valor</label>
-                        <input onkeypress="return(testaCampoValor(this, '.', ',',event))" type="text" placeholder="R$0,00" id="valor">
+                        <input onkeypress="return(testaCampoValor(this, '.', ',',event))" type="text" placeholder="R$0,00" id="valor" name="valor">
                     </div>
 
                 </div>
 
                 <div class="botao-transacao">
-                    <button onclick="enviaFormulario(event);">Adicionar transação</button>
-
+                    <input type="submit" value="Adicionar transação"></input>
                 </div>
             </form>
 

@@ -126,7 +126,7 @@ body{
     margin-left: 15px;
     margin-right: 15px;
 }
-.botao-transacao button{
+.botao-transacao input{
     background-color: #333333;
     border-radius: 4px;
     color: white;
@@ -262,7 +262,7 @@ body{
         display: flex;
         justify-content: flex-end;
     }
-    .botao-transacao button{
+    .botao-transacao input{
         width: 200px;
     }
     .nova-transacao{
@@ -354,7 +354,7 @@ body{
     .header-texto{
         margin-right: 2px;
     }
-    .botao-transacao button{
+    .botao-transacao input{
         width: 100%;
     }
     #mv1{

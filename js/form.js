@@ -1,5 +1,5 @@
 function enviaFormulario(e) {
-    
+    e.preventDefault();
     var nomeMercadoria = document.getElementById("nomeMercadoria");
     var valor = document.getElementById("valor")
 
@@ -23,19 +23,24 @@ function enviaFormulario(e) {
     else{
         extrato = [];
     }
-    valorItem = e.path[2].elements['valor'].value
+    
+    
+    valorItem = e.target.elements['valor'].value
     valorItem = valorItem.replace(/\./g, '');
     valorItem = valorItem.replace(',','.');
     extrato.push({
         
-        descricaoSinal: (e.path[2].elements['tipoTransacao'].value === 'Compra' ? '-' : '+'),
-        descricaoTexto: e.path[2].elements['nomeMercadoria'].value,
+        descricaoSinal: (e.target.elements['tipoTransacao'].value === 'Compra' ? '-' : '+'),
+        descricaoTexto: e.target.elements['nomeMercadoria'].value,
         valorTransacao: parseFloat(valorItem)
-
+        
     })
-
     
-    localStorage.setItem('extrato', JSON.stringify(extrato)); 
+    
+    localStorage.setItem('extrato', JSON.stringify(extrato));
+    desenhaTabela();
+    calculaTotal(); 
+    
 }
 function testaCampoValor(objTextBox, separadorMilesimo, separadorDecimal, e){
     var sep = 0;
