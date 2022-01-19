@@ -40,7 +40,9 @@ function enviaFormulario(e) {
     localStorage.setItem('extrato', JSON.stringify(extrato));
     desenhaTabela();
     calculaTotal(); 
-    
+
+    e.target.elements['nomeMercadoria'].value = ""
+    e.target.elements['valor'].value = ""
 }
 function testaCampoValor(objTextBox, separadorMilesimo, separadorDecimal, e){
     var sep = 0;

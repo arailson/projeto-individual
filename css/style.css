@@ -201,7 +201,9 @@ body{
 }
 .linha-horizontal{
     border: 1px solid #979797;
-    
+}
+#lh{
+    border: 1px solid #979797;
 }
 .lucro {
     text-align: right;

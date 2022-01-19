@@ -7,18 +7,32 @@ function desenhaTabela(){
     else{
         extrato = [];
     }
-    var extratoDesenha = ""
-    for (infoExtrato in extrato) {
-        extratoDesenha =`<div class="descricao-valor">
-        <div class="descricao-transacao">
-        <p class="descricao-sinal"> ${extrato[infoExtrato].descricaoSinal} </p>
-        <p class="descricao-texto">${extrato[infoExtrato].descricaoTexto}</p>
-        </div>
-        <p class="valor-transacao">${extrato[infoExtrato].valorTransacao.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</p>
-        </div>
-        <div class="linha-horizontal"></div>`
-    };
-    document.querySelector("div.extrato-transacao-item").innerHTML += extratoDesenha;
+    var extratoDesenha = "";
+    if(extrato.length === 0){
+        document.querySelector(".total").style.display = 'none';
+        document.querySelector(".total span").style.display = 'none';
+        document.querySelector(".descricao-valor").style.justifyContent = 'center';
+        document.querySelector(".nenhuma-transacao").style.display = 'block';
+        document.querySelector(".nenhuma-transacao span").style.display = 'block';
+    }
+    else{
+        document.querySelector(".total").style.display = 'block';
+        document.querySelector(".total span").style.display = 'block';
+        document.querySelector(".descricao-valor").style.justifyContent = 'space-between';
+        document.querySelector(".nenhuma-transacao").style.display = 'none';
+
+        for (infoExtrato in extrato) {
+            extratoDesenha +=`<div class="descricao-valor">
+            <div class="descricao-transacao">
+            <p class="descricao-sinal"> ${extrato[infoExtrato].descricaoSinal} </p>
+            <p class="descricao-texto">${extrato[infoExtrato].descricaoTexto}</p>
+            </div>
+            <p class="valor-transacao">${extrato[infoExtrato].valorTransacao.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</p>
+            </div>
+            <div id="lh"></div>`
+        };
+        document.querySelector("div.extrato-transacao-item").innerHTML = extratoDesenha;
+    }
 }
 
 function calculaTotal(){
@@ -58,21 +72,24 @@ function calculaTotal(){
 
 function excluirDados(){
     var extratoVazio = localStorage.getItem('extrato')
+    var confirmaExclusao = confirm("Deseja remover todas as transações?");
     if (extratoVazio != null) {
         var extrato = JSON.parse(extratoVazio)
     }
     else{
         extrato = [];
     }
-    if(extrato.length === 0){
-        alert('Não há nenhuma informação para remover');
-    }
-    else{
-        extrato.splice(0,infoExtrato + 1);
-        document.querySelector("div.extrato-transacao-item").remove();
+    if(confirmaExclusao){
+        for(infoExtrato in extrato){
+            document.querySelector("div.descricao-valor").remove();
+            document.getElementById("lh").remove();
+        }
+        extrato.splice(0);
 
     }
     localStorage.setItem('extrato',JSON.stringify(extrato))
+    desenhaTabela();
+    
     total = 0;
     if(total == 0){
         document.querySelector(".lucro").innerText = '';
