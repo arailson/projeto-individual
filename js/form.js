@@ -13,9 +13,6 @@ function enviaFormulario(e) {
         return;
     }
 
-    
-    
-    
     var extratoVazio = localStorage.getItem('extrato')
     if (extratoVazio != null) {
         var extrato = JSON.parse(extratoVazio)
@@ -24,25 +21,32 @@ function enviaFormulario(e) {
         extrato = [];
     }
     
-    
     valorItem = e.target.elements['valor'].value
-    valorItem = valorItem.replace(/\./g, '');
-    valorItem = valorItem.replace(',','.');
-    extrato.push({
-        
-        descricaoSinal: (e.target.elements['tipoTransacao'].value === 'Compra' ? '-' : '+'),
-        descricaoTexto: e.target.elements['nomeMercadoria'].value,
-        valorTransacao: parseFloat(valorItem)
-        
-    })
-    
-    
-    localStorage.setItem('extrato', JSON.stringify(extrato));
-    desenhaTabela();
-    calculaTotal(); 
+    var temNumeros = valorItem.match(/[0-9]/g);
+    if(temNumeros == null){
+        alert("Valor invalido");
+        e.target.elements['valor'].value = ""
+    }
+    else{      
+        valorItem = valorItem.replace(/\./g, '');
+        valorItem = valorItem.replace(',','.');
+        extrato.push({
+            
+            descricaoSinal: (e.target.elements['tipoTransacao'].value === 'Compra' ? '-' : '+'),
+            descricaoTexto: e.target.elements['nomeMercadoria'].value,
+            valorTransacao: parseFloat(valorItem)
+            
+        })
 
-    e.target.elements['nomeMercadoria'].value = ""
-    e.target.elements['valor'].value = ""
+        localStorage.setItem('extrato', JSON.stringify(extrato));
+        desenhaTabela();
+        calculaTotal(); 
+        e.target.elements['nomeMercadoria'].value = ""
+        e.target.elements['valor'].value = ""
+    }
+    
+    
+
 }
 function testaCampoValor(objTextBox, separadorMilesimo, separadorDecimal, e){
     var sep = 0;

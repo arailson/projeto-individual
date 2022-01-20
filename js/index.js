@@ -1,4 +1,6 @@
-
+document.getElementById('valor').onpaste = function(){
+    return false
+}
 function desenhaTabela(){
     var extratoVazio = localStorage.getItem('extrato')
     if (extratoVazio != null) {
@@ -114,6 +116,9 @@ function fecharMenu(){
     {
         document.querySelector(".cadastro-limpar").style.right = -252;
     }
+}
+function focaFormulario(){
+    document.getElementById('nomeMercadoria').focus();
 }
 desenhaTabela();
 calculaTotal();

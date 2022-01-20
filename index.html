@@ -41,7 +41,7 @@
                     </div>
 
                     <div id="p1" class="posicao-elementos">
-                        <a class="a-cadastro">Cadastro de transações</a>
+                        <a onclick="focaFormulario()" class="a-cadastro">Cadastro de transações</a>
 
                     </div>
                     <div class="divisao"></div>
@@ -88,7 +88,7 @@
 
                     <div class="item-formulario">
                         <label>Valor</label>
-                        <input onkeypress="return(testaCampoValor(this, '.', ',',event))" type="text" placeholder="R$0,00" id="valor" name="valor">
+                        <input onkeypress="return(testaCampoValor(this, '.', ',',event))" onpaste="return false;" type="text" placeholder="R$0,00" id="valor" name="valor">
                     </div>
 
                 </div>
